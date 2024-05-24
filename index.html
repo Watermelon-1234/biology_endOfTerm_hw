@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基因遺傳計算工具</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>基因遺傳計算工具</h1>
+        <p>不同基因請用空白隔開<br>同一對基因用"-"分開 例如:A-a A-a<br>一般等位基因請用大小寫區分顯隱性<br>可以有多種基因<br>等顯性請用底線"_"處理ex:I_A-i I_B-I_A</p>
+        <form id="geneticsForm">
+            <label for="inheritanceType">遺傳類型：</label>
+            <select id="inheritanceType">
+                <option value="single">單基因遺傳</option>
+                <option value="multiple">多基因遺傳</option>
+            </select>
+
+            <div id="geneDetails">
+                <label for="geneInfo">基因信息：</label>
+                <input type="text" id="geneInfo" placeholder="例如：A-a A-a 或 I_A-I_B I_B-i">
+            </div>
+
+            
+
+            <button type="button" onclick="calculateGenetics()">計算</button>
+        </form>
+
+        <div id="results">
+            <h2>結果</h2>
+            <p id="resultText"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
